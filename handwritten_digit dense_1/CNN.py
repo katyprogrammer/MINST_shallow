@@ -291,11 +291,11 @@ def main(num_epochs=100,fin_params=None,fout_params=None,A_B=None, rank=None, sm
         O = lasagne.layers.get_all_layers(network)
         if rank is not None:
             # try largest 1-rank approximate
-            if small == 'large':
-                A = load_largest_rank(A, O, rank)
+            # if small == 'large':
+            A = load_largest_rank(A, O, rank)
             # try smallest 1-rank approximate
-            else:
-                A = load_smallest_rank(A, O, rank)
+            # else:
+            #    A = load_smallest_rank(A, O, rank)
         lasagne.layers.set_all_param_values(network, A)
     params = lasagne.layers.get_all_params(network, trainable=True)
 
@@ -360,9 +360,9 @@ def main(num_epochs=100,fin_params=None,fout_params=None,A_B=None, rank=None, sm
 
     # dump parameters
     # set an output directory according to the parameters
-    output_directory = str(num_epochs) + "_" + fout_params + "_" + A_B + "_" + str(rank) + "_" + small + "_" + "_".join(transfer)
-    cPickle.dump(lasagne.layers.get_all_layers(network), open(output_directory + "/" + fout_params, 'w+'))
-
+    # output_directory = str(num_epochs) + "_" + fout_params + "_" + A_B + "_" + str(rank) + "_" + small + "_" + "_".join(transfer)
+    # cPickle.dump(lasagne.layers.get_all_layers(network), open(output_directory + "/" + fout_params, 'w+'))
+    cPickle.dump(lasagne.layers.get_all_layers(network), open(fout_params, 'w+'))
 if __name__ == '__main__':
     opts = parse_arg()
     kwargs = {}

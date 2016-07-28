@@ -291,11 +291,11 @@ def main(num_epochs=100,fin_params=None,fout_params=None,A_B=None, rank=None, sm
         O = lasagne.layers.get_all_layers(network)
         if rank is not None:
             # try largest 1-rank approximate
-            if small == 'large':
-                A = load_largest_rank(A, O, rank)
+            # if small == 'large':
+            A = load_largest_rank(A, O, rank)
             # try smallest 1-rank approximate
-            else:
-                A = load_smallest_rank(A, O, rank)
+            # else:
+            #    A = load_smallest_rank(A, O, rank)
         lasagne.layers.set_all_param_values(network, A)
     params = lasagne.layers.get_all_params(network, trainable=True)
 

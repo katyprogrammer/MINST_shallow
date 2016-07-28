@@ -1,0 +1,132 @@
+loading data...
+#train = 23525, #test = 4861, #valid = 5879
+building model and compiling functions...
+['conv_1', 'dense_1']
+w=(32, 1, 5, 5),b=(32,)
+w=(512, 256),b=(256,)
+decomposing tensor W of shape (2, 512, 256)...
+decomposing tensor B of shape (2, 256)...
+starting training...
+Epoch 1 of 30 took 5.407s
+  training loss:		1.942304
+  validation loss:		1.303814
+  validation accuracy:		77.80 %
+Epoch 2 of 30 took 4.917s
+  training loss:		1.319696
+  validation loss:		0.821889
+  validation accuracy:		87.60 %
+Epoch 3 of 30 took 4.421s
+  training loss:		0.967733
+  validation loss:		0.524596
+  validation accuracy:		90.49 %
+Epoch 4 of 30 took 4.482s
+  training loss:		0.751317
+  validation loss:		0.380197
+  validation accuracy:		91.98 %
+Epoch 5 of 30 took 4.404s
+  training loss:		0.604556
+  validation loss:		0.301679
+  validation accuracy:		93.02 %
+Epoch 6 of 30 took 4.861s
+  training loss:		0.514886
+  validation loss:		0.254173
+  validation accuracy:		93.64 %
+Epoch 7 of 30 took 5.167s
+  training loss:		0.452451
+  validation loss:		0.217213
+  validation accuracy:		94.11 %
+Epoch 8 of 30 took 5.128s
+  training loss:		0.404449
+  validation loss:		0.195049
+  validation accuracy:		94.22 %
+Epoch 9 of 30 took 5.203s
+  training loss:		0.378148
+  validation loss:		0.177253
+  validation accuracy:		94.71 %
+Epoch 10 of 30 took 5.360s
+  training loss:		0.345455
+  validation loss:		0.167182
+  validation accuracy:		94.84 %
+Epoch 11 of 30 took 6.121s
+  training loss:		0.320021
+  validation loss:		0.156467
+  validation accuracy:		95.27 %
+Epoch 12 of 30 took 5.569s
+  training loss:		0.304185
+  validation loss:		0.146561
+  validation accuracy:		95.53 %
+Epoch 13 of 30 took 6.881s
+  training loss:		0.293482
+  validation loss:		0.135837
+  validation accuracy:		95.78 %
+Epoch 14 of 30 took 6.984s
+  training loss:		0.274843
+  validation loss:		0.131063
+  validation accuracy:		95.93 %
+Epoch 15 of 30 took 6.925s
+  training loss:		0.262148
+  validation loss:		0.127523
+  validation accuracy:		95.91 %
+Epoch 16 of 30 took 6.677s
+  training loss:		0.257281
+  validation loss:		0.120593
+  validation accuracy:		96.11 %
+Epoch 17 of 30 took 5.987s
+  training loss:		0.247298
+  validation loss:		0.118202
+  validation accuracy:		96.07 %
+Epoch 18 of 30 took 5.994s
+  training loss:		0.242478
+  validation loss:		0.113841
+  validation accuracy:		96.27 %
+Epoch 19 of 30 took 5.976s
+  training loss:		0.232607
+  validation loss:		0.110339
+  validation accuracy:		96.40 %
+Epoch 20 of 30 took 6.093s
+  training loss:		0.227539
+  validation loss:		0.108589
+  validation accuracy:		96.49 %
+Epoch 21 of 30 took 6.171s
+  training loss:		0.222687
+  validation loss:		0.106612
+  validation accuracy:		96.56 %
+Epoch 22 of 30 took 5.526s
+  training loss:		0.215054
+  validation loss:		0.101126
+  validation accuracy:		96.65 %
+Epoch 23 of 30 took 5.695s
+  training loss:		0.209958
+  validation loss:		0.099087
+  validation accuracy:		96.71 %
+Epoch 24 of 30 took 6.263s
+  training loss:		0.206279
+  validation loss:		0.099150
+  validation accuracy:		96.75 %
+Epoch 25 of 30 took 6.810s
+  training loss:		0.202909
+  validation loss:		0.095966
+  validation accuracy:		96.89 %
+Epoch 26 of 30 took 6.800s
+  training loss:		0.196939
+  validation loss:		0.094674
+  validation accuracy:		96.84 %
+Epoch 27 of 30 took 6.535s
+  training loss:		0.192284
+  validation loss:		0.091333
+  validation accuracy:		97.04 %
+Epoch 28 of 30 took 7.077s
+  training loss:		0.190403
+  validation loss:		0.090442
+  validation accuracy:		96.91 %
+Epoch 29 of 30 took 7.135s
+  training loss:		0.187327
+  validation loss:		0.089222
+  validation accuracy:		97.05 %
+Epoch 30 of 30 took 6.923s
+  training loss:		0.183236
+  validation loss:		0.088070
+  validation accuracy:		97.02 %
+Final results:
+  test loss:			0.084491
+  test accuracy:		97.18 %
