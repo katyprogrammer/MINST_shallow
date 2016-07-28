@@ -42,7 +42,7 @@ A = np.array(range(5))
 # tgt
 B = 5+A
 
-isDownload = False
+isDownload = True
 BATCHN = 500
 # LAYERS = ['conv_1','maxpool_1','conv_2','maxpool_2','dropout_1','dense_1','dropout_2','dense_output']
 TARGET = []
@@ -70,7 +70,8 @@ def load_dataset(A_B):
         if not exists('train'):
             os.makedirs('train')
         x = {i:[] for i in range(10)}
-        for i in range(len(trainY)):
+        # x = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: []}
+	for i in range(len(trainY)):
             tmp = x[trainY[i]]
             tmp.append(trainX[i])
             x[trainY[i]] = tmp
@@ -79,7 +80,8 @@ def load_dataset(A_B):
         if not exists('test'):
             os.makedirs('test')
         x = {i:[] for i in range(10)}
-        for i in range(len(testY)):
+        # x = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: []}
+	for i in range(len(testY)):
             tmp = x[testY[i]]
             tmp.append(testX[i])
             x[testY[i]] = tmp
@@ -291,11 +293,11 @@ def main(num_epochs=100,fin_params=None,fout_params=None,A_B=None, rank=None, sm
         O = lasagne.layers.get_all_layers(network)
         if rank is not None:
             # try largest 1-rank approximate
-            if small == 'large':
-                A = load_largest_rank(A, O, rank)
+            #if small == 'large':
+            A = load_largest_rank(A, O, rank)
             # try smallest 1-rank approximate
-            else:
-                A = load_smallest_rank(A, O, rank)
+            #else:
+            #    A = load_smallest_rank(A, O, rank)
         lasagne.layers.set_all_param_values(network, A)
     params = lasagne.layers.get_all_params(network, trainable=True)
 
@@ -360,9 +362,9 @@ def main(num_epochs=100,fin_params=None,fout_params=None,A_B=None, rank=None, sm
 
     # dump parameters
     # set an output directory according to the parameters
-    output_directory = str(num_epochs) + "_" + fout_params + "_" + A_B + "_" + str(rank) + "_" + small + "_" + "_".join(transfer)
-    cPickle.dump(lasagne.layers.get_all_layers(network), open(output_directory + "/" + fout_params, 'w+'))
-
+    # output_directory = str(num_epochs) + "_" + fout_params + "_" + A_B + "_" + str(rank) + "_" + small + "_" + "_".join(transfer)
+    # cPickle.dump(lasagne.layers.get_all_layers(network), open(output_directory + "/" + fout_params, 'w+'))
+    cPickle.dump(lasagne.layers.get_all_layers(network), open(fout_params, 'w+'))
 if __name__ == '__main__':
     opts = parse_arg()
     kwargs = {}
